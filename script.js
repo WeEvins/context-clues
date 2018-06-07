@@ -26,9 +26,12 @@ document.addEventListener('DOMContentLoaded', function () {
         var randFriend = friendNames[Math.floor(Math.random() * friendNames.length)];
         var randWeapon = weaponNames[Math.floor(Math.random() * weaponNames.length)];
         var randLocation = locationNames[Math.floor(Math.random() * locationNames.length)];
+        console.log(accusation);
+        console.log(randFriend, randWeapon, randLocation);
+        
 
-        //okay my math is somewhat working. it's pulling a random one from the array, but its the SAME random one
-        accusation.addEventListener('dblclick', (e) => {
+        //my stuff works, var is just dumb and i hate it. haha
+        accusation.addEventListener('dblclick', () => {
             console.log('it worked')
             alert(`I accuse ${randFriend}, with ${randWeapon} in the ${randLocation}!!`);
         })
