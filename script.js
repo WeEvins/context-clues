@@ -28,11 +28,9 @@ document.addEventListener('DOMContentLoaded', function () {
         var randLocation = locationNames[Math.floor(Math.random() * locationNames.length)];
 
         //okay my math is somewhat working. it's pulling a random one from the array, but its the SAME random one
-
-        accusation.onclick =  function(e){
-            var targetItem = e.target;
-           targetItem.alert = (`I accuse ${randFriend}, with ${randWeapon} in the ${randLocation}!!`)
-        };
-
-}
+        accusation.addEventListener('dblclick', (e) => {
+            console.log('it worked')
+            alert(`I accuse ${randFriend}, with ${randWeapon} in the ${randLocation}!!`);
+        })
+    }
 });    
